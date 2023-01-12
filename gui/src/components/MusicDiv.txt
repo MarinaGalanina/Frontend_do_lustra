@@ -1,0 +1,31 @@
+import { el } from 'date-fns/locale';
+import React, { useState, useEffect } from 'react';
+import Sound from "react-sound";
+import music from "./forest-with-small-river-birds-and-nature-field-recording-6735.mp3";
+function MusicDiv(volumeFromAppJs=50) {
+  const [musicFileName, setMusicFileName] = useState("Dźwięki Lasu.mp3");
+  const [isPlaying,setIsPlaying] = useState("STOPPED");
+  const [recognizedWord, setRecognizedWord] = useState("STOPPED");
+  //const [currentAudio,setCurrentAudio] = useState(new Audio("./musicFiles/scott-buckley-a-kind-of-hope.mp3"));
+  useEffect(() => {
+    setMusicFileName(Array.isArray(musicFileName.split(".")) ? musicFileName.split(".").slice(0,-1).join('') : "")
+  
+  }, []);
+
+  return (
+    <div className="MusicDiv">
+      {isPlaying!=="PLAYING"?<button onClick={()=>setIsPlaying("PLAYING")}>Paused</button>:<button hidden={true} onClick={()=>setIsPlaying("STOPPED")}>Playing</button>}
+      <div className="MusicHeader">Obecna Muzyka</div>
+      <div>{musicFileName}</div>
+      <Sound
+      url={music}
+      playStatus={
+        isPlaying
+      }
+      volume={volumeFromAppJs}
+      />
+    </div>
+  );
+}
+
+export default MusicDiv;

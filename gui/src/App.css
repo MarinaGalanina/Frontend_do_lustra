@@ -1,0 +1,237 @@
+.App {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("background.jpg");
+}
+.OpenWeatherApiDisclaimer
+{
+  font-size: 0.5vw;
+}
+.FlexRowHeader{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 2vh;
+}
+.Grid{
+  display: grid;
+  grid-template-columns: 30vw 30vw;
+  grid-template-rows: 13vw 13vw;
+  margin-top: 1vh;
+}
+.FlexRowWeather{
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-top: 0.5vw;
+}
+.WeatherTemperatureDiv
+{
+  font-size: 4vw;
+  margin-right: 0.5vw;
+  border: solid;
+  border-radius: 50px;
+  background-color: rgb(0, 28, 29);
+  color: #ffffff;
+  height: 7vw;
+  padding-top: 0.5vw;
+  width: 13vw;
+  margin-top: 0.5vw;
+  border-color: #000000;
+}
+.WeatherDescriptionDiv
+{
+  color: #000000;
+  padding-top: 1.5vw;
+  margin-left: 0.5vw;
+  font-size: 1.3vw;
+  font-weight: bold;
+  border: solid;
+  border-radius: 50px;
+  background-color: rgb(238, 255, 0);
+  height: 6vw;
+  width: 13vw;
+  margin-top: 0.5vw;
+}
+.DateHourDiv{
+  opacity: 0.9;
+  font-size: 7vw;
+  width: 30vw;
+  height: 10vw;
+  background-color: #000000;
+  text-align: center;
+  border-radius: 15px;
+  border: solid;
+  border-color: #707070;
+  border-width: 5px;
+  color: white;
+}
+.CalendarDiv{
+  opacity: 0.9;
+  font-size: 5vw;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  background-color: #474747;
+  text-align: center;
+  border-radius: 15px;
+  border: solid;
+  border-width: 5px;
+  color: white;
+  border-color: #707070;
+}
+.CalendarDayField
+{
+  width: 3vw;
+  height: 3vw;
+  background-color: #000000;
+  border-radius: 10px;
+  color: white;
+  font-size: 2vw;
+  margin: 0.3vw;
+}
+.CalendarDayField.Actual
+{
+  background-color: greenyellow;
+  color: black;
+  border: solid;
+  width: 2.6vw;
+  height: 2.6vw;
+  border-width: 0.2vw;
+  font-size: 1.8vw;
+  font-weight: bold;
+}
+.RowCalendarDayField
+{
+  display: flex;
+  justify-content: center;
+}
+.MusicDiv{
+  opacity: 0.9;
+  font-size: 2.3vw;
+  width: 30vw;
+  height: 10vw;
+  background-color: #003a22;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  border: solid;
+  border-width: 5px;
+}
+.WeatherDiv{
+  opacity: 0.9;
+  width: 30vw;
+  height: 10vw;
+  background-color: #00837c;
+  text-align: center;
+  border-radius: 15px;
+  border: solid;
+  border-width: 5px;
+}
+.SpokenWordDiv{
+  margin-top: 4vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  width: 70vw;
+  opacity: 0.8;
+  height: 7vw;
+  font-size: 5vw;
+  width: 70vw;
+  padding: 1vw;
+  color: white;
+  background-color: #000000;
+  text-align: center;
+  border-radius: 15px;
+  border-width: 5px;
+}
+.SpokenWordDivText{
+  transition: opacity 1s;  
+  opacity: 1;
+}
+.SpokenWordDivTextFaded{ 
+  transition: opacity 1s;  
+  opacity: 0;
+}
+.BlackScreenDiv{ 
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.5vw;
+}
+.BlackScreenDivFlex{
+  display: flex;
+  justify-content: space-between;
+}
+.BlackScreenDiv span
+{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 2.5vw; /* <-- adjust this */
+}
+.ComplementDiv{
+  line-height: 9vw;
+  margin-bottom: 1vw;
+  opacity: 0.9;
+  font-size: 2vw;
+  margin-left: 4.75vw;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  background-color: #dcff5c;
+  text-align: center;
+  border-radius: 15px;
+  border: solid;
+  border-width: 5px;
+  color: rgb(0, 0, 0);
+  border-color: #707070;
+}
+.ComplementDiv span
+{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 2vw; /* <-- adjust this */
+}
+.JokeDiv span
+{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 2vw; /* <-- adjust this */
+}
+.JokeDiv{
+  line-height: 9vw;
+  margin-top: 1vw;
+  opacity: 0.9;
+  font-size: 2vw;
+  margin-left: 4.75vw;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  background-color: #dbffc3;
+  text-align: center;
+  border-radius: 15px;
+  border: solid;
+  border-width: 5px;
+  color: rgb(0, 0, 0);
+  border-color: #707070;
+}
+.MusicHeader
+{
+  margin-left: 4.8vw;
+  border-width: 5px;
+  width: 20vw;
+  border: solid;
+  background: #474747;
+  border-color: #000000;
+  border-radius: 30px;
+  color: #ddffbe;
+}
